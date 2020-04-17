@@ -83,16 +83,15 @@ class Validate extends Component {
                                 type="email"
                                 name="email"
                                 placeholder="email"
-                                value={this.props.email}
+                                value={this.state.email}
                                 onChange={this.handleChange}
 
                             />
-                            {this.state.emailError ? (
-                            <div style={{ fontSize: 12, color: "red" }}>
+                            {this.props.emailError ? (
+                           null
+                            ):<div style={{ fontSize: 12, color: "red" }}>
                                 {this.state.emailError}
-
-                            </div>
-                            ):null}
+                            </div>}
                         </div>
                         <div className="password">
                             <label htmlFor="password">Password</label>
@@ -105,11 +104,11 @@ class Validate extends Component {
 
                             />
 
-                            {this.state.passwordError ? (
-                            <div style={{ fontSize: 12, color: "red" }}>
+                            {this.props.passwordError ? (
+                            null
+                            ):<div style={{ fontSize: 12, color: "red" }}>
                                 {this.state.passwordError}
-                            </div>
-                            ):null}
+                            </div>}
                         </div>
                         <div className="createAccount">
                             <button type="submit">Login</button>
